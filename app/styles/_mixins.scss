@@ -1,0 +1,53 @@
+/*------------------------------
+BRANDING
+-------------------------------*/
+
+
+$purple: #72116c;
+$purple-light: #f1e6f0;
+$text-color-blue: #0c306c;
+$text-color-dark: #333333;
+$text-color-light: #fff;
+$grey: #717271;
+$text-color-inactive-light: #cdcccb;
+$light-border: #fff;
+$inactive-grey: #cdcccb;
+
+
+/*------------------------------
+Media Queries
+-------------------------------*/
+
+/* max-width */
+@mixin max-width($point) {
+  @media screen and (max-width: $point) { @content; }
+}
+
+/* max-width */
+@mixin min-width($point) {
+  @media screen and (min-width: $point) { @content; }
+}
+
+/* range */
+@mixin width-range($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) { @content; }
+}
+
+
+/*------------------------------
+Keyframe
+-------------------------------*/
+@mixin key-frames($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
