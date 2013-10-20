@@ -1,6 +1,7 @@
 <div ng-include src="templates.header.url"></div>
 
 <div class="container">
-  <h1>Test</h1>
-  <p>{{helloWorld}}</p>
+  <div class="reddit-link" data-ng-repeat="link in redditLinks">
+    <a href="">{{link.data.title}}</a>
+  </div>
 </div>

@@ -2,9 +2,13 @@
 
 /*global app */
 
-app.controller('indexController', function ($scope, layoutService) {
+app.controller('indexController', function ($scope, layoutService, apiService) {
 
-  $scope.helloWorld = 'Hello World';
+  $scope.redditLinks = [];
+
+
+  //This function call will update the above $scope property `redditLinks`
+  apiService.getLinks('http://www.reddit.com/r/javascript.json?jsonp=JSON_CALLBACK', $scope, 'redditLinks');
 
   //Layout stuff
   $scope.templates = {
