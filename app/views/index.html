@@ -1,2 +1,6 @@
 <h1>Test</h1>
-<p>{{helloWorld}}</p>
+<ul>
+  <li ng-repeat="person in people">{{person.attributes.name}}</li>
+</ul>
+<input type="text" ng-model="name">
+<button value="name" ng-click="add(name)">Add</button>

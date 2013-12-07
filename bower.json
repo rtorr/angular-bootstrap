@@ -8,7 +8,9 @@
     "es5-shim": "~2.0.8",
     "angular-cookies": "~1.0.7",
     "angular-sanitize": "~1.0.7",
-    "bootstrap": "~2.3.2"
+    "bootstrap": "~2.3.2",
+    "backbone": "~1.1.0",
+    "underscore": "~1.5.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

@@ -155,6 +155,18 @@ module.exports = function (grunt) {
         dirs: ['<%= appConfig.dist %>']
       }
     },
+    compress: {
+      main: {
+        options: {
+          mode: 'gzip'
+        },
+        expand: true,
+        cwd: '<%= appConfig.dist %>',
+        src: ['scripts/*'],
+        dest: '<%= appConfig.dist %>',
+        ext: '.gz.js'
+      }
+    },
     imagemin: {
       dist: {
         files: [
@@ -371,7 +383,8 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy',
-    'usemin'
+    'usemin',
+    'compress'
   ]);
 
   grunt.registerTask('default', [
