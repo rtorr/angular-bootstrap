@@ -1,9 +1,23 @@
-<h1>Test</h1>
-<ul>
-  <li ng-repeat="person in people">{{person.attributes.name}}</li>
-</ul>
-<input type="text" ng-model="name">
-<input type="text" ng-model="helloWorld" placeholder="Enter a name here">
-<button value="name" ng-click="add(name)">Add</button>
-
-<div id="bb"></div>
+<div class="container">
+  <div class="row">
+    <h1>Backbone and Angular Test</h1>
+  </div>
+  <div class="row">
+    <h4>Backbone Model (with angular view):</h4>
+    <ul>
+      <li ng-repeat="person in people">{{person.attributes.name}}</li>
+    </ul>
+    <div class="input-append">
+      <input type="text" ng-model="name">
+      <button value="name" ng-click="add(name)" class="btn">Add</button>
+    </div>
+  </div>
+  <div class="row">
+    <h4>Angular View - Data Binding with Backbone view:</h4>
+    <div>
+      <input type="text" ng-model="helloWorld">
+    </div>
+    <h4>Backbone View:</h4>
+    <div id="bb"></div>
+  </div>
+</div>
