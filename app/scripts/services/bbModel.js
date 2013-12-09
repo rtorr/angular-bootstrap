@@ -21,7 +21,6 @@ app.service('bbModel', function () {
   this.addPerson = function(name){
     var p = new Person({name:name});
     this.People.push(p);
-    console.log(this.People);
   };
 
   var b = "bob";
@@ -33,7 +32,5 @@ app.service('bbModel', function () {
   var d = this.People.get("c1");
 
   d.set({name: "calvin"});
-
-  console.log(this.People);
 
 });

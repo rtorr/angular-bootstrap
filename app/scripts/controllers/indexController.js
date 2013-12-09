@@ -3,7 +3,12 @@
 /*global app */
 
 
-app.controller('indexController', function ($scope, bbModel) {
+app.controller('indexController', function ($scope, bbModel, bbView) {
+
+  //drawCanvasService.draw();
+  $scope.h = {hi: "Hi", scope: $scope};
+  var a = new bbView.view($scope.h);
+
 
   $scope.helloWorld = 'Hello World';
 
@@ -11,6 +16,8 @@ app.controller('indexController', function ($scope, bbModel) {
 
   $scope.add = function(name){
     bbModel.addPerson(name);
+    $scope.h.hi = name;
+    var a = new bbView.view($scope.h);
   };
 
   //Layout stuff
