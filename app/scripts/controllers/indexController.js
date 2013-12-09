@@ -5,22 +5,17 @@
 
 app.controller('indexController', function ($scope, bbModel, bbView) {
 
-  $scope.h = {added: "None yet. Go add something!", scope: $scope};
-  var a = new bbView.view($scope.h);
-
   $scope.helloWorld = 'Hello World';
 
   $scope.people = bbModel.People.models;
 
+  $scope.data = {model: $scope.people, scope: $scope};
+
+  var a = new bbView.view($scope.data);
+
   $scope.add = function(name){
     bbModel.addPerson(name);
-    $scope.h.added = name;
     a.render();
-  };
-
-  //Layout stuff
-  $scope.templates = {
-
   };
 
 });
