@@ -1,20 +1,25 @@
 'use strict';
 
-/*global app, $, Backbone, _ */
+/*global app, Backbone, _ */
 
 app.service('bbView', function ($timeout, $compile) {
 
   var Bookmark = Backbone.View.extend({
 
-    el: angular.element($("#bb")),
+    el: angular.element("#bb"),
 
     initialize: function(options){
       this.options = options;
       this.render();
     },
+
     render: function(){
       var _this = this;
-      var template = _.template( '<p><%= hi %></p><p>{{helloWorld}}</p>', this.options);
+
+      var html = '<p>Latest added to backbone collection: <strong><%= added %></strong></p>'+
+                 '<p>Bound to Angular input above <strong>{{helloWorld}}</strong></p>';
+
+      var template = _.template( html, this.options);
       $compile(_this.$el.html( template ))(_this.options.scope);
     }
 
