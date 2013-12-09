@@ -1,6 +1,6 @@
 'use strict';
 
-/*global app */
+/*global app, Backbone */
 
 
 app.service('bbModel', function () {

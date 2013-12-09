@@ -5,7 +5,6 @@
 
 app.controller('indexController', function ($scope, bbModel, bbView) {
 
-
   $scope.h = {hi: "Hi", scope: $scope};
   var a = new bbView.view($scope.h);
 

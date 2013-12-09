@@ -1,7 +1,6 @@
 'use strict';
 
-/*global app */
-
+/*global app, $, Backbone, _ */
 
 app.service('bbView', function ($timeout, $compile) {
 
