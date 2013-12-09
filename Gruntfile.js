@@ -198,6 +198,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= appConfig.dist %>/styles/main.css': [
+            'app/bower_components/bootstrap/docs/assets/css/bootstrap.css',
+            'app/bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css',
             '.tmp/styles/main.css',
             '<%= appConfig.app %>/styles/main.css'
           ]
@@ -235,28 +237,6 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         files: [
-          {
-            flatten: true,
-            filter: 'isFile',
-            expand: true,
-            dot: true,
-            cwd: "<%= appConfig.app %>",
-            dest: "<%= appConfig.dist %>/styles",
-            src: [
-              "bower_components/bootstrap/docs/assets/css/**"
-            ]
-          },
-          {
-            flatten: true,
-            filter: 'isFile',
-            expand: true,
-            dot: true,
-            cwd: "<%= appConfig.app %>",
-            dest: ".tmp/styles/",
-            src: [
-              "bower_components/bootstrap/docs/assets/css/**"
-            ]
-          },
           {
             flatten: true,
             filter: 'isFile',

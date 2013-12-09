@@ -4,7 +4,7 @@
 
 app.service('bbView', function ($timeout, $compile) {
 
-  var Bookmark = Backbone.View.extend({
+  var BackboneView = Backbone.View.extend({
 
     el: angular.element("#bb"),
 
@@ -23,6 +23,6 @@ app.service('bbView', function ($timeout, $compile) {
 
   });
 
-  this.view = Bookmark;
+  this.view = BackboneView;
 
 });
