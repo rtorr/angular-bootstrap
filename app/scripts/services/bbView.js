@@ -16,7 +16,7 @@ app.service('bbView', function ($timeout, $compile) {
     render: function(){
       var _this = this;
       var html = '<p>Latest added to backbone collection: <strong><%= model[model.length-1].attributes.name %></strong></p>'+
-                 '<p>Bound to Angular input above <strong>{{helloWorld}}</strong></p>';
+                 '<p>Bound to Angular input above: <strong>{{helloWorld}}</strong></p>';
       var template = _.template( html, this.options);
       $compile(_this.$el.html( template ))(_this.options.scope);
     }
