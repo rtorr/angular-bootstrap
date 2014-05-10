@@ -1,4 +1,8 @@
-# Angular Bootstrap
+# DEPRECATION NOTICE
+
+This repository is no longer maintained.
+
+## Angular Bootstrap
 
 Install grunt
 
